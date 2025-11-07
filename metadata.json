@@ -1,0 +1,5 @@
+{
+  "name": "MutualfundProject",
+  "description": "A web platform that provides detailed information about mutual funds, powered by AI. It helps investors explore, compare, and understand mutual funds to make informed decisions.",
+  "requestFramePermissions": []
+}
