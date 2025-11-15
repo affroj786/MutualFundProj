@@ -1,14 +1,15 @@
 
 import { GoogleGenAI, GenerateContentResponse } from "@google/genai";
-import { MutualFund } from '../types';
+import { MutualFund } from "../types";
 
-const API_KEY = process.env.API_KEY;
+const API_KEY = import.meta.env.VITE_API_KEY;
 
 if (!API_KEY) {
-  throw new Error("API_KEY environment variable not set");
+  console.error("VITE_API_KEY is missing. Add it in Vercel → Environment Variables.");
 }
 
 const ai = new GoogleGenAI({ apiKey: API_KEY });
+
 
 export const generateFundInsight = async (fund: MutualFund, query: string): Promise<string> => {
   try {
